@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Myntra GPT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="https://chat.openai.com/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div class="container">
+        <!-- Left side -->
+        <div class="left">
+            <div class="chat_history">
+                <div class="history">
+                    <div class="toggle-btn" id="toggle-btn">
+                        <i class="bi bi-chat-left"></i>
+                    </div>
+                    <p class="title" id="shareToFriends">Click here to share the chat content</p>
+
+                </div>
+                <div class="history">
+                    <div class="toggle-btn" id="toggle-btn">
+                        <i class="bi bi-chat-left"></i>
+                    </div>
+                    <p class="title"> Ask bot for help </p>
+                </div>
+           
+            </div>
+            <div class="settings">
+                <div class="profile">
+                    <div class="user">
+                        <img src="static\images\user-removebg-preview.png">
+                        <h3> Jyotsna Shrivastava</h3>
+                    </div>
+                    <span>...</span>
+                </div>
+            </div>
+        </div>
+        <!-- Right side -->
+        <div class="right">
+               <h1>Myntra GPT</h1>
+            <div class="chat-window">
+                <div id="output"></div>
+                <div id="user-input">
+                    <img src="static\images\correct bg .png">
+                    <button id="start-btn">Let's Begin </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    
+</body>
+</html>
