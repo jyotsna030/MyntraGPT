@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    color: white;
+}
+
+a {
+    color: gray;
+}
+
+i {
+    margin: 3px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.left {
+    background-image: linear-gradient(#ff4d6d, #f72585);
+    width: 16%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.chat_history img{
+    padding: 30px;
+    height: 700px;
+    width: 230px;
+
+}
+
+.left .new_chat {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: 200ms;
+    color: rgb(23, 22, 22);
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 5px;
+    flex-shrink: 0;
+    padding: 10px 20px;
+}
+
+.left .new_chat:hover {
+    background-color: rgba(129, 129, 129, 0.1);
+}
+
+.left .new_chat i {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 12px;
+    height: 16px;
+    width: 16px;
+}
+
+.chat_history {
+    margin: 1rem 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow-y: auto;
+    height: calc(100vh - 160px); /* Adjust this value according to your layout */
+    width: 100%; /* Ensure it takes the full width of the parent container */
+}
+
+.chat_history .history {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 100%; /* Ensure the items take the full width of the container */
+    text-align: left;
+}
+
+.chat_history .history:hover {
+    background-color: rgba(52, 53, 65, 1);
+}
+
+.history .buttons i {
+    padding: 7px;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.settings {
+    position: absolute;
+    bottom: 1px;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    left: 10px;
+    height: max-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.settings .profile:hover {
+    background-color: rgba(52, 53, 65, 1);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.settings .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.settings .profile .user {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user img {
+    border-radius: 1rem;
+}
+
+.user h3 {
+    font-size: 12px;
+}
+
+.right {
+    width: 84%;
+    background-image: url(./images/final.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#output {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message .bubble {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.message.bot .bubble {
+    background-color: #ebe8e5;
+    border-top-left-radius: 0;
+    color: #202123;
+}
+
+.message.user .bubble {
+    background-color: #b21f68;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+#user-input {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6cfd7;
+    width: 100%;
+    
+}
+
+
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #b21f5f;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+}
+#user-input button{
+    align-items: center;
+}
+
+button:hover {
+    background-color: #f08b49;
+    color: black;
+    font-weight: bold;
+}
+
+.option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.option-buttons button {
+    margin: 5px;
+    width: calc(100% - 10px);
+}
+
+.product-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.product-options button {
+    margin: 5px 0;
+    width: calc(100% - 10px);
+}
+
+.right h1 {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(42, 40, 40);
+    padding: 20px;
+}
+
+.avatar ,
+.user img{
+    height: 60px;
+    width: 60px;
+}
+
+.history .title:hover{
+    color: white;
+}
+/* CSS to style the product display */
+#output {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px; /* Adjust spacing between products */
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Adjust maximum width of product container */
+    border: 1px solid #ccc; /* Example border */
+    padding: 10px; /* Example padding */
+}
+
+.product img {
+    max-width: 400px; /* Adjust image size */
+    height: 400px;
+    margin-right: 60px; /* Adjust spacing between image and link */
+}
+
+.product a {
+    text-decoration: none;
+    color: rgb(250, 250, 250); /* Adjust link color */
+    font-weight: bold; /* Example: Make link text bold */
+    transition: color 0.3s;
+}
+
+.product a:hover {
+    color: #0056b3; /* Adjust link color on hover */
+}
+#user-input img{
+    height: 738px;
+    width: 1280px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        order: 2; /* Change order to ensure it appears below or above as desired */
+        display: none; /* Initially hide on mobile */
+    }
+
+    .left.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left .toggle-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .left .new_chat {
+        display: none; /* Hide individual chat items on mobile */
+    }
+
+    .right {
+        width: 100%;
+    }
+
+}
