@@ -97,5 +97,5 @@ We welcome contributions from the community. To contribute, follow these steps:
 ## Contact
 
 For any questions or suggestions, feel free to open an issue or contact us at:
-- **Email**: [your-email@example.com](mailto:jyotsnas0306@gmail.com)
+- **Email**: [jyotsnas0306@gmail.com](mailto:jyotsnas0306@gmail.com)
 - **GitHub Issues**: [MyntraGPT Issues](https://github.com/jyotsna030/MyntraGPT/issues)
